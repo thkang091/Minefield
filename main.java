@@ -14,7 +14,7 @@ public class main {
             System.out.println("Choose the difficulty of your minesweeper game: (easy, medium, hard)");
             choose = scanner.nextLine();
 
-            if (choose.equals("easy") || choose.equals("medium") || choose.equals("hard")) {
+            if ("easy".equals(choose) || "medium".equals(choose) || "hard".equals(choose)) {
                 break;
             } else {
                 System.out.println("try again!");
@@ -61,7 +61,7 @@ public class main {
 
         field.evaluateField();
         // check input
-        if (debug.equals("yes")) {
+        if ("yes".equals(debug)) {
             field.debug();
 
         } else {
@@ -83,13 +83,13 @@ public class main {
 
             }
             flag = flag.trim(); // because there is white space
-            boolFlag = flag.equals("yes");
+            boolFlag = "yes".equals(flag);
             field.guess(x, y, boolFlag);
 
-            if (debug.equals("yes")) {
+            if ("yes".equals(debug)) {
                 field.debug();
 
-            } else if (debug.equals("no")){
+            } else if ("no".equals(debug)){
                 System.out.println(field);
             }
 
