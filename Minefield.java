@@ -1,4 +1,5 @@
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 
@@ -101,7 +102,7 @@ public class Minefield {
      */
     public void createMines(int x, int y, int mines) {
         // To generate random coordinates, create a Random object.
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         // determine and get how many rows and columns the minefield array contains.
         int rows = fieldArray.length;
